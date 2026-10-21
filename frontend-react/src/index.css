@@ -1,0 +1,138 @@
+/* ---------------------------------------------------------------------------
+   Estilos propios de Home Rent Solution.
+   Bootstrap se encarga de la grilla, los componentes y la responsividad;
+   aquí solo va la identidad visual (colores, banner, tarjetas).
+   --------------------------------------------------------------------------- */
+
+:root {
+  --azul: #0d3b66;
+  --verde: #2a9d8f;
+  --verde-oscuro: #1f7a6f;
+  --claro: #f4f7fa;
+}
+
+/* ===== Botón principal de Bootstrap con el verde de la marca ===== */
+.btn-primary {
+  --bs-btn-bg: var(--verde);
+  --bs-btn-border-color: var(--verde);
+  --bs-btn-hover-bg: var(--verde-oscuro);
+  --bs-btn-hover-border-color: var(--verde-oscuro);
+  --bs-btn-active-bg: var(--verde-oscuro);
+  --bs-btn-active-border-color: var(--verde-oscuro);
+  --bs-btn-disabled-bg: var(--verde);
+  --bs-btn-disabled-border-color: var(--verde);
+}
+
+/* ===== Títulos de sección con línea verde ===== */
+.titulo {
+  color: var(--azul);
+  font-size: 1.6rem;
+  font-weight: 700;
+  display: inline-block;
+  border-bottom: 3px solid var(--verde);
+  padding-bottom: 6px;
+  margin-bottom: 8px;
+}
+
+/* ===== Menú ===== */
+.encabezado {
+  background-color: var(--azul);
+}
+
+/* ===== Banner del inicio ===== */
+.banner {
+  background: linear-gradient(rgba(13, 59, 102, 0.7), rgba(13, 59, 102, 0.7)),
+              url('/img/img-banner.avif') center / cover;
+  padding: 90px 0;
+}
+
+/* ===== Tarjetas de propiedades ===== */
+.tarjeta {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tarjeta:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(13, 59, 102, 0.15);
+}
+
+.tarjeta .card-img-top {
+  height: 190px;
+  object-fit: cover;
+}
+
+.precio {
+  color: var(--azul);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* ===== Sección "Cómo funciona" ===== */
+.bloque-claro {
+  background-color: var(--claro);
+}
+
+.numero-paso {
+  width: 46px;
+  height: 46px;
+  line-height: 46px;
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  background-color: var(--verde);
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* ===== Filtros, detalle y reservas ===== */
+.filtros {
+  background-color: var(--claro);
+  border: 1px solid var(--bs-border-color);
+  border-radius: 8px;
+}
+
+.detalle-imagen {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.panel-reserva {
+  position: sticky;
+  top: 90px;
+}
+
+.miniatura {
+  width: 64px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* ===== Formularios ===== */
+.caja-formulario {
+  max-width: 760px;
+}
+
+.caja-angosta {
+  max-width: 420px;
+}
+
+/* ===== Pie de página ===== */
+.pie {
+  background-color: var(--azul);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.pie a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.pie a:hover {
+  color: #f4a261;
+}
+
+.creditos {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
