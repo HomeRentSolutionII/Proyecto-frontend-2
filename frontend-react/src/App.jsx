@@ -68,7 +68,12 @@ function App() {
             }
           />
           <Route path="/registro" element={<Registro />} />
-          <Route path="/login" element={<Login onIniciarSesion={manejarIniciarSesion} />} />
+          <Route
+            path="/login"
+            element={
+              <Login usuario={usuario} onIniciarSesion={manejarIniciarSesion} onCerrarSesion={manejarCerrarSesion} />
+            }
+          />
 
           {/* ===== Jhohan: reemplazar EnConstruccion por cada página ===== */}
           <Route path="/nosotros" element={<EnConstruccion titulo="Nosotros" responsable="Jhohan" />} />

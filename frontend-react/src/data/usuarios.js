@@ -17,6 +17,12 @@ const USUARIOS_INICIALES = [
   },
 ]
 
+// Correo y contraseña del administrador de prueba (para el botón del login)
+export const ADMIN_PRUEBA = {
+  correo: USUARIOS_INICIALES[0].correo,
+  clave: USUARIOS_INICIALES[0].clave,
+}
+
 function guardar(lista) {
   localStorage.setItem(CLAVE_USUARIOS, JSON.stringify(lista))
 }

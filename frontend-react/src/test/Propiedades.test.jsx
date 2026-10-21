@@ -15,7 +15,7 @@ function renderizar() {
 describe('Página Propiedades', () => {
   it('Renderiza una tarjeta por cada propiedad del archivo de datos', () => {
     renderizar()
-    expect(screen.getAllByRole('button', { name: 'Ver detalle' })).toHaveLength(9)
+    expect(screen.getAllByRole('button', { name: 'Ver detalle' })).toHaveLength(20)
   })
 
   it('Al elegir un tipo, muestra solo las propiedades de ese tipo', async () => {
@@ -24,7 +24,7 @@ describe('Página Propiedades', () => {
 
     await usuario.selectOptions(screen.getByLabelText('Tipo de propiedad'), 'Cabaña')
 
-    expect(screen.getAllByRole('button', { name: 'Ver detalle' })).toHaveLength(2)
+    expect(screen.getAllByRole('button', { name: 'Ver detalle' })).toHaveLength(4)
     expect(screen.getByText('Cabaña frente al lago')).toBeInTheDocument()
     expect(screen.queryByText('Loft céntrico para profesionales')).not.toBeInTheDocument()
   })
@@ -39,6 +39,6 @@ describe('Página Propiedades', () => {
     expect(screen.getByText(/No hay propiedades/)).toBeInTheDocument()
 
     await usuario.click(screen.getByRole('button', { name: 'Limpiar filtros' }))
-    expect(screen.getAllByRole('button', { name: 'Ver detalle' })).toHaveLength(9)
+    expect(screen.getAllByRole('button', { name: 'Ver detalle' })).toHaveLength(20)
   })
 })

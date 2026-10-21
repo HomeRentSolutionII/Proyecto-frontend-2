@@ -17,32 +17,32 @@ import {
 import { registrarUsuario, validarCredenciales } from '../data/usuarios'
 
 // setup.js borra localStorage después de cada prueba,
-// así que cada una parte con los 9 datos iniciales del JSON.
+// así que cada una parte con los 20 datos iniciales del JSON.
 
 describe('CRUD de propiedades', () => {
-  it('Lee las 9 propiedades iniciales y busca una por id', () => {
-    expect(listarPropiedades()).toHaveLength(9)
+  it('Lee las 20 propiedades iniciales y busca una por id', () => {
+    expect(listarPropiedades()).toHaveLength(20)
     expect(obtenerPropiedad(3).nombre).toBe('Cabaña de montaña con tinaja')
     expect(obtenerPropiedad(99)).toBeNull()
   })
 
   it('Crea, actualiza y elimina una propiedad', () => {
     const nueva = crearPropiedad({ nombre: 'Casa de prueba', tipo: 'Casa', ubicacion: 'Talca, Maule', precio: 50000 })
-    expect(nueva.id).toBe(10)
-    expect(listarPropiedades()).toHaveLength(10)
+    expect(nueva.id).toBe(21)
+    expect(listarPropiedades()).toHaveLength(21)
 
-    actualizarPropiedad(10, { precio: 55000 })
-    expect(obtenerPropiedad(10).precio).toBe(55000)
+    actualizarPropiedad(21, { precio: 55000 })
+    expect(obtenerPropiedad(21).precio).toBe(55000)
 
-    expect(eliminarPropiedad(10)).toBe(true)
-    expect(obtenerPropiedad(10)).toBeNull()
+    expect(eliminarPropiedad(21)).toBe(true)
+    expect(obtenerPropiedad(21)).toBeNull()
   })
 
   it('Filtra por texto, tipo y rango de precio', () => {
     const todas = listarPropiedades()
-    expect(filtrarPropiedades(todas, { tipo: 'Cabaña' })).toHaveLength(2)
-    expect(filtrarPropiedades(todas, { texto: 'santiago' })).toHaveLength(2)
-    expect(filtrarPropiedades(todas, { precioMin: '80000', precioMax: '100000' })).toHaveLength(2)
+    expect(filtrarPropiedades(todas, { tipo: 'Cabaña' })).toHaveLength(4)
+    expect(filtrarPropiedades(todas, { texto: 'santiago' })).toHaveLength(3)
+    expect(filtrarPropiedades(todas, { precioMin: '80000', precioMax: '100000' })).toHaveLength(5)
   })
 })
 

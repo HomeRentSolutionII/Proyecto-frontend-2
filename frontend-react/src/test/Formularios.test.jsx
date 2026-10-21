@@ -31,6 +31,30 @@ describe('Formulario de inicio de sesión', () => {
 
     expect(onIniciarSesion).toHaveBeenCalledWith(expect.objectContaining({ tipo: 'Administrador' }))
   })
+
+  it('El botón de administrador de prueba rellena el formulario', async () => {
+    const usuario = userEvent.setup()
+    render(<MemoryRouter><Login onIniciarSesion={vi.fn()} /></MemoryRouter>)
+
+    await usuario.click(screen.getByRole('button', { name: 'Usar cuenta de administrador de prueba' }))
+
+    expect(screen.getByLabelText(/Correo electrónico/)).toHaveValue('admin@duoc.cl')
+    expect(screen.getByLabelText(/Contraseña/)).not.toHaveValue('')
+  })
+
+  it('Si ya hay sesión de administrador, muestra el aviso y el acceso al panel', async () => {
+    const usuario = userEvent.setup()
+    const onCerrarSesion = vi.fn()
+    const admin = { nombre: 'Administrador', tipo: 'Administrador' }
+    render(<MemoryRouter><Login usuario={admin} onIniciarSesion={vi.fn()} onCerrarSesion={onCerrarSesion} /></MemoryRouter>)
+
+    expect(screen.getByText('Administrador')).toBeInTheDocument()
+    expect(screen.queryByLabelText(/Correo electrónico/)).not.toBeInTheDocument()
+    expect(screen.getByRole('button', { name: 'Ir al panel de administración' })).toHaveAttribute('href', '/admin')
+
+    await usuario.click(screen.getByRole('button', { name: 'Cerrar sesión' }))
+    expect(onCerrarSesion).toHaveBeenCalledTimes(1)
+  })
 })
 
 describe('Formulario de registro', () => {

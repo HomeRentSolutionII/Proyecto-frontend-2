@@ -3,7 +3,9 @@
 // localStorage, así los cambios se mantienen al recargar la página.
 import datosIniciales from '../assets/js/propiedades.json'
 
-const CLAVE = 'hrs_propiedades'
+// Si se cambian los datos iniciales del JSON, subir el número de versión:
+// así el navegador descarta los datos viejos guardados y carga los nuevos.
+const CLAVE = 'hrs_propiedades_v2'
 
 function guardar(lista) {
   localStorage.setItem(CLAVE, JSON.stringify(lista))

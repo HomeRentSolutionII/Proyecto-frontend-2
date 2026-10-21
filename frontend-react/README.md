@@ -82,6 +82,28 @@ public/img/                Imágenes de las propiedades y del banner
 
 4. Escribe las pruebas de tu página en `src/test/`, con el nombre `TuPagina.test.jsx`.
 
+## Guía visual
+
+Para que todas las páginas se vean iguales, **partan copiando una página existente** y cambien solo el contenido:
+formularios → `Login.jsx` / `Registro.jsx`, tablas → `Reservas.jsx`, listados con tarjetas → `Propiedades.jsx`.
+
+| Elemento | Cómo se hace |
+|---|---|
+| Página | `<Container as="section" className="py-5">` |
+| Título de la página | `<h1 className="titulo">` (lleva la línea verde) |
+| Botón principal | `<Button variant="primary">` (sale verde) |
+| Botón secundario | `<Button variant="outline-dark">` |
+| Botón eliminar | `<Button variant="outline-danger">` |
+| Formulario | Dentro de `<Card className="caja-formulario mx-auto shadow-sm">`, con `CampoFormulario` por campo |
+| Tabla | `<Table responsive hover>` |
+| Mensajes | `<Alert variant="success">`, `"danger"` o `"info"` |
+| Columnas | `<Row>` y `<Col md={6}>`, `<Col lg={4}>`... para que sea responsivo |
+
+**Qué evitar:**
+- Las clases de la Parcial 1 (`boton`, `tarjeta-cuerpo`, `contenedor`...): ya no existen y quedan sin estilo.
+- Otros colores de Bootstrap en botones (`success`, `warning`, `info`) o colores escritos a mano. Si hace falta un color, usar `var(--azul)` o `var(--verde)`.
+- `getElementById` para leer formularios: en React los valores van en `useState`.
+
 ## Reglas del equipo
 
 - **El menú y el pie no se copian en cada página**: ya están en `App.jsx` y se muestran en todas.
