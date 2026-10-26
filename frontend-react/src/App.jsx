@@ -6,9 +6,13 @@ import PiePagina from './components/PiePagina'
 import { agregarReserva, obtenerReservas, quitarReserva, vaciarReservas } from './data/reservas'
 import { cerrarSesion, guardarSesion, obtenerSesion } from './data/usuarios'
 import DetallePropiedad from './pages/DetallePropiedad'
+import Blog from './pages/Blog'
+import Contacto from './pages/Contacto'
+import DetalleBlog from './pages/DetalleBlog'
 import Inicio from './pages/Inicio'
 import Login from './pages/Login'
 import NoEncontrada from './pages/NoEncontrada'
+import Nosotros from './pages/Nosotros'
 import Propiedades from './pages/Propiedades'
 import Registro from './pages/Registro'
 import Reservas from './pages/Reservas'
@@ -75,11 +79,11 @@ function App() {
             }
           />
 
-          {/* ===== Jhohan: reemplazar EnConstruccion por cada página ===== */}
-          <Route path="/nosotros" element={<EnConstruccion titulo="Nosotros" responsable="Jhohan" />} />
-          <Route path="/blog" element={<EnConstruccion titulo="Blog" responsable="Jhohan" />} />
-          <Route path="/blog/:id" element={<EnConstruccion titulo="Detalle del blog" responsable="Jhohan" />} />
-          <Route path="/contacto" element={<EnConstruccion titulo="Contacto" responsable="Jhohan" />} />
+          {/* ===== Jhohan ===== */}
+          <Route path="/nosotros" element={<Nosotros />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:id" element={<DetalleBlog />} />
+          <Route path="/contacto" element={<Contacto />} />
 
           {/* ===== Noemí: reemplazar EnConstruccion por el panel ===== */}
           <Route path="/admin/*" element={<EnConstruccion titulo="Panel de administración" responsable="Noemí" />} />

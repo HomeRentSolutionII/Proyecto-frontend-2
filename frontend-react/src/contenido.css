@@ -1,0 +1,65 @@
+/* ---------------------------------------------------------------------------
+   Estilos de las páginas de contenido: Nosotros, Blog, Detalle del blog y
+   Contacto. Se importan desde esas páginas, así no se mezclan con index.css.
+   --------------------------------------------------------------------------- */
+
+/* Texto de lectura con un ancho cómodo */
+.texto-lectura {
+  max-width: 760px;
+}
+
+.meta-articulo {
+  color: #6c757d;
+  font-size: 0.85rem;
+}
+
+/* ===== Nosotros: tarjetas de perfil ===== */
+.perfil .avatar {
+  width: 64px;
+  height: 64px;
+  line-height: 64px;
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  background-color: var(--azul);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.perfil .rol {
+  color: var(--verde-oscuro);
+  font-weight: 600;
+}
+
+.icono-grande {
+  font-size: 2rem;
+}
+
+/* ===== Detalle del blog ===== */
+.articulo {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.articulo h2 {
+  color: var(--azul);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: 28px;
+}
+
+.articulo-imagen {
+  width: 100%;
+  max-height: 380px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 16px 0 24px;
+}
+
+/* ===== Contacto ===== */
+.contador {
+  display: block;
+  text-align: right;
+  font-size: 0.8rem;
+  color: #6c757d;
+}
