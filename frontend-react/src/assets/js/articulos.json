@@ -1,0 +1,126 @@
+[
+  {
+    "id": 1,
+    "categoria": "Para anfitriones",
+    "titulo": "Cómo preparar tu propiedad antes de recibir huéspedes",
+    "fecha": "2026-09-28",
+    "autor": "Equipo Home Rent Solution",
+    "imagen": "/img/img-tarjeta-9.avif",
+    "alt": "Cocina equipada con isla y taburetes",
+    "extracto": "Una lista simple para que la primera impresión sea buena: limpieza, lo básico que no puede faltar e instrucciones claras para el ingreso.",
+    "contenido": [
+      {
+        "tipo": "p",
+        "texto": "Recibir a un huésped no es como recibir a un amigo: no conoce la propiedad, no sabe dónde está cada cosa y llega esperando que todo funcione. Prepararte con anticipación te ahorra consultas, mejora la experiencia y hace que tu propiedad destaque en el catálogo."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Limpieza y orden"
+      },
+      {
+        "tipo": "p",
+        "texto": "Revisa cada espacio como si fueras el huésped: baño, cocina, ropa de cama, closets y superficies. Deja despejados los lugares de guardado para que la persona pueda instalarse y reserva un closet o cajón con llave para tus pertenencias personales."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Lo básico que no puede faltar"
+      },
+      {
+        "tipo": "ul",
+        "items": [
+          "Sábanas y toallas limpias para cada huésped.",
+          "Artículos de aseo: papel higiénico, jabón y basureros con bolsa.",
+          "Cocina con utensilios, vajilla y elementos básicos de limpieza.",
+          "Wi-Fi funcionando, con la clave a la vista.",
+          "Calefacción o ventilación acorde a la temporada."
+        ]
+      },
+      {
+        "tipo": "h2",
+        "texto": "Información clara para el ingreso"
+      },
+      {
+        "tipo": "p",
+        "texto": "Explica cómo llegar, cómo entrar y a qué hora se puede ingresar. Una hoja con las instrucciones de la propiedad, que incluya el uso de la calefacción, las reglas de convivencia, los horarios de silencio y tu contacto, evita la mayoría de las dudas."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Fotografías y descripción fieles"
+      },
+      {
+        "tipo": "p",
+        "texto": "Las fotografías deben mostrar la propiedad tal como es, con buena luz natural. Una descripción honesta, que cuente la ubicación, la capacidad y los servicios reales, reduce las cancelaciones y deja a los huéspedes conformes con lo que encuentran."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Publica y mantén todo al día"
+      },
+      {
+        "tipo": "p",
+        "texto": "Cuando todo esté listo, publica tu propiedad indicando su ubicación, las fotografías y el precio por noche. Si algo cambia, como un servicio nuevo o un ajuste de precio, actualiza la información para que el catálogo siempre refleje la realidad."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "categoria": "Para inquilinos",
+    "titulo": "Cómo elegir la propiedad ideal para tu estadía",
+    "fecha": "2026-09-21",
+    "autor": "Equipo Home Rent Solution",
+    "imagen": "/img/img-tarjeta-8.avif",
+    "alt": "Living amplio con grandes ventanales y comedor",
+    "extracto": "Ubicación, capacidad, servicios y precio total: qué revisar antes de reservar para que el viaje salga como lo imaginaste.",
+    "contenido": [
+      {
+        "tipo": "p",
+        "texto": "Con tantas opciones, decidir dónde quedarse puede abrumar. Partir por lo que realmente necesitas, y no por la fotografía más llamativa, te ayuda a decidir más rápido y a llegar tranquilo."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Define primero cómo será tu viaje"
+      },
+      {
+        "tipo": "p",
+        "texto": "¿Viajas en pareja, en familia o con amigos? ¿Buscas descansar o estar cerca de todo? La cantidad de personas, la cercanía a la playa, la montaña o el centro, y el tipo de propiedad (departamento, casa, cabaña, loft o parcela) reducen bastante la lista."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Usa los filtros del catálogo"
+      },
+      {
+        "tipo": "p",
+        "texto": "En la página de Propiedades puedes filtrar por ubicación, tipo y rango de precio. Comienza con un rango amplio y ajústalo a medida que comparas."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Qué revisar en el detalle"
+      },
+      {
+        "tipo": "ul",
+        "items": [
+          "Capacidad: que alcance para todas las personas del grupo.",
+          "Servicios: cocina, calefacción, estacionamiento y Wi-Fi.",
+          "Ubicación: la distancia a los lugares que quieres visitar.",
+          "Reglas de la casa: mascotas, horarios y uso de espacios.",
+          "Fotografías: que muestren todos los espacios de la propiedad."
+        ]
+      },
+      {
+        "tipo": "h2",
+        "texto": "Calcula el total antes de confirmar"
+      },
+      {
+        "tipo": "p",
+        "texto": "El precio publicado es por noche. Multiplícalo por la cantidad de noches para conocer el total antes de confirmar. En Mis reservas verás el valor total de lo que has seleccionado."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Coordina con el anfitrión"
+      },
+      {
+        "tipo": "p",
+        "texto": "Si tienes dudas sobre la llegada, el estacionamiento o los horarios, coordina directamente con el anfitrión antes del viaje. Resolverlo con tiempo evita sorpresas el día de la llegada."
+      }
+    ]
+  }
+]
