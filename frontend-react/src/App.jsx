@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
-import EnConstruccion from './components/EnConstruccion'
 import Encabezado from './components/Encabezado'
 import PiePagina from './components/PiePagina'
 import { agregarReserva, obtenerReservas, quitarReserva, vaciarReservas } from './data/reservas'
@@ -16,6 +15,7 @@ import Nosotros from './pages/Nosotros'
 import Propiedades from './pages/Propiedades'
 import Registro from './pages/Registro'
 import Reservas from './pages/Reservas'
+import AdminPanel from './pages/AdminPanel'
 
 function App() {
   // Estado compartido por varias páginas. Vive aquí y baja por props.
@@ -86,7 +86,7 @@ function App() {
           <Route path="/contacto" element={<Contacto />} />
 
           {/* ===== Noemí: reemplazar EnConstruccion por el panel ===== */}
-          <Route path="/admin/*" element={<EnConstruccion titulo="Panel de administración" responsable="Noemí" />} />
+          <Route path="/admin/*" element={<AdminPanel />} />
 
           <Route path="*" element={<NoEncontrada />} />
         </Routes>
