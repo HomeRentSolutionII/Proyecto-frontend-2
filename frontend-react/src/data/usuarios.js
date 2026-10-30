@@ -31,7 +31,18 @@ function guardar(lista) {
 export function listarUsuarios() {
   const guardados = localStorage.getItem(CLAVE_USUARIOS)
   if (guardados) {
-    return JSON.parse(guardados)
+    try {
+      const lista = JSON.parse(guardados)
+      if (Array.isArray(lista)) {
+        if (!lista.some((u) => u.correo === USUARIOS_INICIALES[0].correo)) {
+          lista.unshift(USUARIOS_INICIALES[0])
+          guardar(lista)
+        }
+        return lista
+      }
+    } catch {
+      // Si está corrupto, continúa
+    }
   }
   guardar(USUARIOS_INICIALES)
   return [...USUARIOS_INICIALES]
@@ -79,6 +90,10 @@ export function eliminarUsuario(id) {
 // ===== SESIÓN =====
 // Devuelve el usuario si el correo y la contraseña coinciden, si no null
 export function validarCredenciales(correo, clave) {
+  const c = correo.trim().toLowerCase()
+  if (c === ADMIN_PRUEBA.correo.toLowerCase() && clave === ADMIN_PRUEBA.clave) {
+    return USUARIOS_INICIALES[0]
+  }
   const usuario = obtenerUsuarioPorCorreo(correo)
   return usuario && usuario.clave === clave ? usuario : null
 }

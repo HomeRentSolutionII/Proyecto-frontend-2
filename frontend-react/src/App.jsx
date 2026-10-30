@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, useNavigate } from 'react-router-dom'
 import Encabezado from './components/Encabezado'
 import PiePagina from './components/PiePagina'
 import { agregarReserva, obtenerReservas, quitarReserva, vaciarReservas } from './data/reservas'
@@ -18,6 +18,7 @@ import Reservas from './pages/Reservas'
 import AdminPanel from './pages/AdminPanel'
 
 function App() {
+  const navegar = useNavigate()
   // Estado compartido por varias páginas. Vive aquí y baja por props.
   const [reservas, setReservas] = useState(() => obtenerReservas())
   const [usuario, setUsuario] = useState(() => obtenerSesion())
@@ -41,6 +42,7 @@ function App() {
   function manejarCerrarSesion() {
     cerrarSesion()
     setUsuario(null)
+    navegar('/')
   }
 
   return (
@@ -55,6 +57,7 @@ function App() {
         <Routes>
           {/* ===== Víctor ===== */}
           <Route path="/" element={<Inicio />} />
+          <Route path="/home" element={<Inicio />} />
           <Route path="/propiedades" element={<Propiedades />} />
           <Route
             path="/propiedades/:id"
